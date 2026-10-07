@@ -30,8 +30,12 @@ async def main():
 
     # 1. Конфиг
     try:
-        with open("config.json", "r", encoding="utf-8") as f:
-            config = json.load(f)
+        import os
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
+    with open(config_path, "r", encoding="utf-8") as f:
+        config = json.load(f)
+        
+            
 
         logger.remove()
         log_level = "DEBUG" if config.get("Debug", False) else "INFO"
