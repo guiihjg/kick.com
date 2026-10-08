@@ -14,7 +14,7 @@ dist/
 *.egg-info/
 
 # 🔹 Configuration & Secrets
-config.json
+
 !config.example.json 
 
 # 🔹 Logs & Databases
